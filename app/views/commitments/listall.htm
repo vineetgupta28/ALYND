@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+    <title>ALYND</title>
+    <style type="text/css">
+        .style2
+        {
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            width: 202px;
+        }
+    </style>
+</head>
+<body style="margin: 0px; padding: 0px; background-color: #F4F4F4; top: 0px; left: 0px; right: 0px; bottom: 0px; clip: rect(0px, 0px, 0px, 0px);">
+	 <table style="width: 100%;">
+        <tr>
+            <td>
+                <img alt=""  src="/assets/logo1.jpg" /> 
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+   <table style="background-image: url('http://localhost/app/assets/images/Spacer.jpg')">
+        <tr>
+            <td>
+                <img alt=""  src="../../assets/images/Request_commitment.jpg" /> 
+            </td>
+            <td >
+            	
+             
+            
+            </td>
+             <td>
+                <img alt=""  src="../../assets/images/MyCommitments_Selected.jpg" /> 
+            </td>
+        </tr>
+    </table>
+<table style="background-color: #E1E1E1">
+        <tr>
+            <td>
+               <%= render 'layouts/list', :locals => {:commitmentstate => "Made"} %>
+            </td>
+              <td>
+              &nbsp;
+            </td>
+             <td>
+                  <%= render 'layouts/list', :locals => {:commitmentstate => "to_me"} %>
+            </td>
+              <td>
+              &nbsp;
+            </td>
+            <td>
+                  <%= render 'layouts/list', :locals => {:commitmentstate => "completed"} %>
+            </td>
+        </tr>
+     </table>
+</body>
+</html>

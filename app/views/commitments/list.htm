@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .style4
+        {
+            width: 304px;
+        }
+
+        </style>
+</head>
+<body> 
+<div style="width: 1600px; height: 800px; overflow: auto"  >
+<table  style="border-width: thin; border-color: #000000;  overflow:auto" 
+        border="1"  >
+<tr><td style="background-color: #3366CC; color: #FFFFFF" class="style4" >Commitments I have made </td><td style="background-color: #3366CC; color: #FFFFFF"  >
+ Filter > </td></tr>
+
+<tr><td  align=center class="style4" colspan=2>
+   
+  <div align="left" >&nbsp; &nbsp;OverDue 1 <br />
+    &nbsp; <img  src="/assets/line1.gif" />
+  </div>
+    <% @commitmentsToMe.each do |c| %>
+     <div align=center>
+    <table style="width:80%; height: 50px; border-width: thin; border-color: #000000;" border="1" >
+        <tr   >
+            <td style="text-align: left;">
+                 <%=c.CommitmentCode%> -  <%=c.Title%>
+               </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                      
+           
+          
+        </tr>
+    </table>
+      </div>
+        <br />
+     <%end%>
+  <br />
+
+    </td></tr>
+ 
+</table>
+</div>
+</body>
+</html>
+
+

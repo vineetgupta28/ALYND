@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	
+	<script type="text/javascript" src="/assets/jquery.slimscroll.min.js"></script>
+	
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .style4
+        {
+            width: 322px;
+        }
+      
+        </style>
+  <script type="text/javascript" >
+$(function(){  
+	  $('#scroll_div1').slimScroll({height: '650',   alwaysVisible: true});
+	    $('#scroll_div2').slimScroll({height: '650',    alwaysVisible: true});
+	      $('#scroll_div3').slimScroll({height: '650' ,    alwaysVisible: true});
+	  });
+	   
+ //$(function() {    $( "#accordion" ).accordion({      collapsible: true    });  });
+ 
+ $("#Header1").click(function () {
+         // alert($("#aa").val());
+         
+
+      });
+
+function vv()
+{
+	
+          $header = $("#header1");
+          //getting the next element
+          $content = $header.next();
+          alert($content);
+          //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+          $content.slideToggle(500, function () {
+              //execute this after slideToggle is done
+              //change text of header based on visibility of content div
+              $header.text(function () {
+                  //change text based on condition
+                  // return $content.is(":visible") ? "Collapse" : "Expand";
+              });
+          });
+          $('#aa').val("1");
+     
+        
+}
+
+       </script>
+</head>
+<body style="background-color: #F4F4F4;"> 
+	  <%
+  if (locals[:commitmentstate]== "Made")
+  	@Commitments=@commitmentsMade
+  	@StatusSting="  Commitments I have made"
+  	@StatusCode=1
+  end
+  if (locals[:commitmentstate]== "to_me")
+  	@Commitments=@commitmentsToMe
+  	@StatusSting="  Commitments made to me"
+  	@StatusCode=2
+  end
+  if (locals[:commitmentstate]== "completed")
+  	@Commitments=@commitmentsCompleted
+ 	@StatusSting="  Completed Commitments"
+ 	@StatusCode=3
+  end
+  %>
+  <input id='aa' type="hidden" value="0">
+<div style="border:3px solid;border-color: #D1D1D1; border-radius:3px;font-size: 14px; font-family: Arial, Helvetica, sans-serif">
+<table  style="border-width: thin; border-color: #000000;background-color: #F4F4F4;border:0px solid; border-radius:3px; "  >
+<tr><td style="background-color: #3366CC; color: #FFFFFF;border-top-left-radius:3px;height:25px;" class="style4" >&nbsp;<%=@StatusSting%> 
+	</td><td style="background-color: #3366CC; color: #FFFFFF;border-top-right-radius:3px"  >&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;
+ Filter> </td></tr>
+
+<tr >
+<td  align=center class="style4" colspan=2 style="border-bottom-left-radius:3px;border-bottom-right-radius:8px">
+	<div  id="scroll_div<%=@StatusCode%>" style="width:600px ;height: 650px; overflow: auto;border-bottom-left-radius:3px"  >
+	<br>
+	<%@shown=0
+	@overDue=0
+	%>
+	<%@counter=1%>
+
+    <% @Commitments.each do |c| %>
+    <%@counter=@counter+1%>
+   
+<%if (c.DueDate!=@DueDate1 &&  @shown==0)%>
+   	
+   	<%if (c.DueDate<Date.today && @overDue==0)%>
+   	 
+   	 <div  id="Header1" onclick="vv();"><span>
+   &nbsp;&nbsp;Overdue
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+   <div >
+  	<%@overDue="1"%>
+  	
+  	<%elsif (c.DueDate==Date.today)%>
+  	
+  </div>
+   &nbsp;&nbsp;Due Today
+	<br />    &nbsp;&nbsp; <img  src="/assets/line1.jpg" />   
+
+  	<%elsif (c.DueDate==Date.today+1) %>
+  	
+  	 &nbsp;&nbsp;Due Tomorrow
+	<br />  &nbsp;&nbsp; <img  src="/assets/line1.jpg" /> 
+  	<%elsif (c.DueDate==Date.today+2) %>
+
+   &nbsp;&nbsp;<%= "Due " + c.DueDate.strftime("%A")%>
+  	<br />    &nbsp;&nbsp; <img  src="/assets/line1.jpg" /> 
+  	<%elsif (c.DueDate>Date.today+2) %>
+  
+  	 &nbsp;&nbsp;<%= "Due " + c.DueDate.strftime("%A") + "/onwards" %>
+  	<br /> &nbsp;&nbsp;<img  src="/assets/line1.jpg" />  
+  	<% @shown=1%>
+ 
+   	<%end%>
+<%end
+
+	
+		@DueDate1 = c.DueDate
+	
+%>
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> <%=c.CommitmentCode%> </b> <br> <%=c.Title%>  
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+     <%end%>
+
+
+  <br />
+</div>
+    </td></tr>
+ 
+</table>
+</div>
+</body><br>
+</html>
+
+
