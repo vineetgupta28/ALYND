@@ -21,8 +21,9 @@ test:
   host: localhost
 
 production:
-  adapter: mysql
-  database: library_development
-  username: root
-  password: sa
-  host: localhost
+  adapter: postgresql
+  database: dfik51n54hd8cs
+  username: nmtesrhlvdtzlp
+  password: pl_XkzvAe_JZiCmy4eeBn2Dg1g
+  host: ec2-107-22-190-179.compute-1.amazonaws.com
+  Port: 5432
