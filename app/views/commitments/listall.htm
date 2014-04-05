@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
   <title>ALYND</title>
@@ -131,60 +132,62 @@
       
         </style>
   <script type="text/javascript" >
-      $(function () {
-          $('#scroll_div1').slimScroll({ height: '650', alwaysVisible: true });
-          $('#scroll_div2').slimScroll({ height: '650', alwaysVisible: true });
-          $('#scroll_div3').slimScroll({ height: '650', alwaysVisible: true });
-      });
-
-      //$(function() {    $( "#accordion" ).accordion({      collapsible: true    });  });
-
-      $(".header").click(function () {
-          // alert($("#aa").val());
+$(function(){  
+	  $('#scroll_div1').slimScroll({height: '650',   alwaysVisible: true});
+	    $('#scroll_div2').slimScroll({height: '650',    alwaysVisible: true});
+	      $('#scroll_div3').slimScroll({height: '650' ,    alwaysVisible: true});
+	  });
+	   
+ //$(function() {    $( "#accordion" ).accordion({      collapsible: true    });  });
+ 
+ $(".header").click(function () {
+          alert($("#aa").val());
           $header = $(this);
           //getting the next element
           $content = $header.next();
           //alert($content);
           //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-          if ($("#aa").val() == 0) {
-              $content.slideToggle(500, function () {
-                  //execute this after slideToggle is done
-                  //change text of header based on visibility of content div
-                  $header.text(function () {
-                      //change text based on condition
-                      // return $content.is(":visible") ? "Collapse" : "Expand";
-                  });
-              });
-              $('#aa').val("1");
+          if($("#aa").val()==0)
+          {
+	          $content.slideToggle(500, function () {
+	              //execute this after slideToggle is done
+	              //change text of header based on visibility of content div
+	              $header.text(function () {
+	                  //change text based on condition
+	                  // return $content.is(":visible") ? "Collapse" : "Expand";
+	              });
+	          });
+	          $('#aa').val("1");
           }
-          else {
-              $('#aa').val("0");
+          else
+          {
+          	$('#aa').val("0");
           }
-
-
+          
+     
 
       });
-      /*
-      function vv()
-      {
+/*
+function vv()
+{
 	
-      $header = $("#header1");
-      //getting the next element
-      $content = $header.next();
-      alert($content);
-      //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-      $content.slideToggle(500, function () {
-      //execute this after slideToggle is done
-      //change text of header based on visibility of content div
-      $header.text(function () {
-      //change text based on condition
-      // return $content.is(":visible") ? "Collapse" : "Expand";
-      });
-      });
-      $('#aa').val("1");
+          $header = $("#header1");
+          //getting the next element
+          $content = $header.next();
+          alert($content);
+          //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+          $content.slideToggle(500, function () {
+              //execute this after slideToggle is done
+              //change text of header based on visibility of content div
+              $header.text(function () {
+                  //change text based on condition
+                  // return $content.is(":visible") ? "Collapse" : "Expand";
+              });
+          });
+          $('#aa').val("1");
      
         
-      }*/
+}*/
 
        </script>
 </head>
@@ -198,16 +201,18 @@
  Filter> </td></tr>
 
 <tr >
-<td  align=center class="style4" colspan=2 style="border-bottom-left-radius:3px;border-bottom-right-radius:8px">
+<td  align=center class="style4" colspan=2 style="border-bottom-left-radius:3px;border-bottom-right-radius:8px" valign="top">
 	<div  id="scroll_div1" style="width:600px ;height: 600px; overflow: auto;border-bottom-left-radius:3px"
-		   >
+		  valign="top" >
 	<br>
 
    
    	
 
    	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span >
-   &nbsp;&nbsp;<B>Overdue</B>
+   &nbsp;&nbsp;<B>
+   	Overdue
+   	</B>
   	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
    <div >
   	
@@ -219,7 +224,7 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-6 </b> <br> This commitment made by Vineet to Vishal  
+               <b> VG-07 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -248,7 +253,7 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-1 </b> <br> This commitment made by Vineet to Vishal  
+               <b> VG-09 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -276,36 +281,7 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-5 </b> <br> This commitment made by Vineet to Vishal  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-2 </b> <br> This commitment made by Vineet to Vishal  
+               <b> VG-01 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -330,7 +306,9 @@
   </div>
   	 <br>
    	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
-   &nbsp;&nbsp;<b>Due Today</b>
+   &nbsp;&nbsp;<b>
+   	Completed Today
+   	</b>
   	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
    <div >
  
@@ -341,7 +319,35 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-3 </b> <br> This commitment made by Vineet to Vishal  
+               <b> VG-18 </b> <br> vineet to vishal  
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-02 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -376,7 +382,35 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-4 </b> <br> This commitment made by Vineet to Vishal  
+               <b> VG-08 </b> <br> Vineet to vishal   
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-03 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -400,7 +434,7 @@
  </div>
   <br>
    	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
-   &nbsp;&nbsp;<b>Due Sunday</b>
+   &nbsp;&nbsp;<b>Due Monday</b>
   	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
    <div >
  
@@ -412,520 +446,7 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> UI2X-035 </b> <br> White Paper on the latest product  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
-  </div>
-   <br>
-   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
-   &nbsp;&nbsp;<b>Due Monday/onwards</b>
-  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
-     	
-   <div >
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> MI3L-352 </b> <br> Hi-res photos for the marketing materials  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-075 </b> <br> receive contractor evaluations  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-077 </b> <br> This commitment made by Vineet to Vishal  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-077 </b> <br> This commitment made by Vineet to Vishal  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-  </div>
-
-  <br />
-</div>
-    </td></tr>
- 
-</table>
-</div>
-</body><br>
-</html>
-
-
-
-            </td>
-              <td >
-              &nbsp;    &nbsp;   
-            </td>
-             <td  >
-                  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
-	
-	<script type="text/javascript" src="/assets/jquery.slimscroll.min.js"></script>
-	
-    <title>Untitled Page</title>
-    <style type="text/css">
-        .style4
-        {
-            width: 322px;
-        }
-        .header{
-        	
-        }
-      
-        </style>
-  <script type="text/javascript" >
-      $(function () {
-          $('#scroll_div1').slimScroll({ height: '650', alwaysVisible: true });
-          $('#scroll_div2').slimScroll({ height: '650', alwaysVisible: true });
-          $('#scroll_div3').slimScroll({ height: '650', alwaysVisible: true });
-      });
-
-      //$(function() {    $( "#accordion" ).accordion({      collapsible: true    });  });
-
-      $(".header").click(function () {
-          // alert($("#aa").val());
-          $header = $(this);
-          //getting the next element
-          $content = $header.next();
-          //alert($content);
-          //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-          if ($("#aa").val() == 0) {
-              $content.slideToggle(500, function () {
-                  //execute this after slideToggle is done
-                  //change text of header based on visibility of content div
-                  $header.text(function () {
-                      //change text based on condition
-                      // return $content.is(":visible") ? "Collapse" : "Expand";
-                  });
-              });
-              $('#aa').val("1");
-          }
-          else {
-              $('#aa').val("0");
-          }
-
-
-
-      });
-      /*
-      function vv()
-      {
-	
-      $header = $("#header1");
-      //getting the next element
-      $content = $header.next();
-      alert($content);
-      //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-      $content.slideToggle(500, function () {
-      //execute this after slideToggle is done
-      //change text of header based on visibility of content div
-      $header.text(function () {
-      //change text based on condition
-      // return $content.is(":visible") ? "Collapse" : "Expand";
-      });
-      });
-      $('#aa').val("1");
-     
-        
-      }*/
-
-       </script>
-</head>
-<body style="background-color: #F4F4F4;"> 
-  <input id='aa' type="hidden" value="0">
-<div style="border:3px solid;border-color: #D1D1D1; border-radius:3px;font-size: 14px; font-family: Arial, Helvetica, sans-serif">
-<table  style="border-width: thin; border-color: #000000;background-color: #F4F4F4;border:0px solid; border-radius:3px; "  >
-<tr><td style="background-color: #3366CC; color: #FFFFFF;border-top-left-radius:3px;height:25px;" class="style4" >&nbsp;  Commitments made to me 
-	</td><td style="background-color: #3366CC; color: #FFFFFF;border-top-right-radius:3px"   valign="middle"  >&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;
- Filter> </td></tr>
-
-<tr >
-<td  align=center class="style4" colspan=2 style="border-bottom-left-radius:3px;border-bottom-right-radius:8px">
-	<div  id="scroll_div2" style="width:600px ;height: 600px; overflow: auto;border-bottom-left-radius:3px"
-		   >
-	<br>
-
-   
-   	
-
-   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span >
-   &nbsp;&nbsp;<B>Overdue</B>
-  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
-   <div >
-  	
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-7 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-8 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-9 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-10 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-11 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-12 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
-  	
-  </div>
-  	 <br>
-   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
-   &nbsp;&nbsp;<b>Due Today</b>
-  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
-   <div >
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-13 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
-  	 </div>
-  	    	 <br>
-   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
-   &nbsp;&nbsp;<b>Due Tomorrow</b>
-  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
-   <div >
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-14 </b> <br> This commitment made by Vishal to Vineet  
-               </td>
-                             <td>
-          &nbsp;  &nbsp;
-                </td>
-              <td>
-                <img alt="" src=""/>
-                </td>
-                         <td>
-              &nbsp;  &nbsp;
-                </td>
-                       <td>
-              &nbsp;  &nbsp;
-                </td>
-          
-        </tr>
-    </table>
-
- 
-   
-   	
- </div>
-  <br>
-   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
-   &nbsp;&nbsp;<b>Due Sunday</b>
-  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
-   <div >
- 
- 
-    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
-        <tr >
-        	              <td>
-             &nbsp;  &nbsp;
-                </td>
-                      
-            <td style="text-align: left;"> 
-               <b> URTG-15 </b> <br> This commitment made by Vishal to Vineet  
+               <b> VG-04 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -961,7 +482,7 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-076 </b> <br> This commitment made by Vishal to Vineet  
+               <b> VG-05 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -989,7 +510,7 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-16 </b> <br> This commitment made by Vishal to Vineet  
+               <b> VG-06 </b> <br> Vineet to vishal   
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -1016,7 +537,381 @@
  
 </table>
 </div>
-</body><br>
+</html>
+
+
+
+            </td>
+              <td >
+              &nbsp;    &nbsp;   
+            </td>
+             <td  >
+                  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	
+	<script type="text/javascript" src="/assets/jquery.slimscroll.min.js"></script>
+	
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .style4
+        {
+            width: 322px;
+        }
+        .header{
+        	
+        }
+      
+        </style>
+  <script type="text/javascript" >
+$(function(){  
+	  $('#scroll_div1').slimScroll({height: '650',   alwaysVisible: true});
+	    $('#scroll_div2').slimScroll({height: '650',    alwaysVisible: true});
+	      $('#scroll_div3').slimScroll({height: '650' ,    alwaysVisible: true});
+	  });
+	   
+ //$(function() {    $( "#accordion" ).accordion({      collapsible: true    });  });
+ 
+ $(".header").click(function () {
+          alert($("#aa").val());
+          $header = $(this);
+          //getting the next element
+          $content = $header.next();
+          //alert($content);
+          //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+          if($("#aa").val()==0)
+          {
+	          $content.slideToggle(500, function () {
+	              //execute this after slideToggle is done
+	              //change text of header based on visibility of content div
+	              $header.text(function () {
+	                  //change text based on condition
+	                  // return $content.is(":visible") ? "Collapse" : "Expand";
+	              });
+	          });
+	          $('#aa').val("1");
+          }
+          else
+          {
+          	$('#aa').val("0");
+          }
+          
+     
+
+      });
+/*
+function vv()
+{
+	
+          $header = $("#header1");
+          //getting the next element
+          $content = $header.next();
+          alert($content);
+          //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+          $content.slideToggle(500, function () {
+              //execute this after slideToggle is done
+              //change text of header based on visibility of content div
+              $header.text(function () {
+                  //change text based on condition
+                  // return $content.is(":visible") ? "Collapse" : "Expand";
+              });
+          });
+          $('#aa').val("1");
+     
+        
+}*/
+
+       </script>
+</head>
+<body style="background-color: #F4F4F4;"> 
+  <input id='aa' type="hidden" value="0">
+<div style="border:3px solid;border-color: #D1D1D1; border-radius:3px;font-size: 14px; font-family: Arial, Helvetica, sans-serif">
+<table  style="border-width: thin; border-color: #000000;background-color: #F4F4F4;border:0px solid; border-radius:3px; "  >
+<tr><td style="background-color: #3366CC; color: #FFFFFF;border-top-left-radius:3px;height:25px;" class="style4" >&nbsp;  Commitments made to me 
+	</td><td style="background-color: #3366CC; color: #FFFFFF;border-top-right-radius:3px"   valign="middle"  >&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;
+ Filter> </td></tr>
+
+<tr >
+<td  align=center class="style4" colspan=2 style="border-bottom-left-radius:3px;border-bottom-right-radius:8px" valign="top">
+	<div  id="scroll_div2" style="width:600px ;height: 600px; overflow: auto;border-bottom-left-radius:3px"
+		  valign="top" >
+	<br>
+
+   
+   	
+
+   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span >
+   &nbsp;&nbsp;<B>
+   	Overdue
+   	</B>
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+   <div >
+  	
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-10 </b> <br> vishal to vineet   
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-16 </b> <br> vineet to vishal  
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+   	
+  	
+  </div>
+  	 <br>
+   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
+   &nbsp;&nbsp;<b>
+   	Completed Today
+   	</b>
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+   <div >
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-17 </b> <br> vineet to vishal  
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-11 </b> <br> vishal to vineet   
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+   	
+  	 </div>
+  	    	 <br>
+   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
+   &nbsp;&nbsp;<b>Due Tomorrow</b>
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+   <div >
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-12 </b> <br> vishal to vineet   
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+   	
+ </div>
+  <br>
+   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
+   &nbsp;&nbsp;<b>Due Monday</b>
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+   <div >
+ 
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-13 </b> <br> vishal to vineet   
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+   	
+  </div>
+   <br>
+   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
+   &nbsp;&nbsp;<b>Due Tuesday/onwards</b>
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+     	
+   <div >
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-14 </b> <br> vishal to vineet   
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-15 </b> <br> vishal to vineet   
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+  </div>
+
+  <br />
+</div>
+    </td></tr>
+ 
+</table>
+</div>
 </html>
 
 
@@ -1044,60 +939,62 @@
       
         </style>
   <script type="text/javascript" >
-      $(function () {
-          $('#scroll_div1').slimScroll({ height: '650', alwaysVisible: true });
-          $('#scroll_div2').slimScroll({ height: '650', alwaysVisible: true });
-          $('#scroll_div3').slimScroll({ height: '650', alwaysVisible: true });
-      });
-
-      //$(function() {    $( "#accordion" ).accordion({      collapsible: true    });  });
-
-      $(".header").click(function () {
-          // alert($("#aa").val());
+$(function(){  
+	  $('#scroll_div1').slimScroll({height: '650',   alwaysVisible: true});
+	    $('#scroll_div2').slimScroll({height: '650',    alwaysVisible: true});
+	      $('#scroll_div3').slimScroll({height: '650' ,    alwaysVisible: true});
+	  });
+	   
+ //$(function() {    $( "#accordion" ).accordion({      collapsible: true    });  });
+ 
+ $(".header").click(function () {
+          alert($("#aa").val());
           $header = $(this);
           //getting the next element
           $content = $header.next();
           //alert($content);
           //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-          if ($("#aa").val() == 0) {
-              $content.slideToggle(500, function () {
-                  //execute this after slideToggle is done
-                  //change text of header based on visibility of content div
-                  $header.text(function () {
-                      //change text based on condition
-                      // return $content.is(":visible") ? "Collapse" : "Expand";
-                  });
-              });
-              $('#aa').val("1");
+          if($("#aa").val()==0)
+          {
+	          $content.slideToggle(500, function () {
+	              //execute this after slideToggle is done
+	              //change text of header based on visibility of content div
+	              $header.text(function () {
+	                  //change text based on condition
+	                  // return $content.is(":visible") ? "Collapse" : "Expand";
+	              });
+	          });
+	          $('#aa').val("1");
           }
-          else {
-              $('#aa').val("0");
+          else
+          {
+          	$('#aa').val("0");
           }
-
-
+          
+     
 
       });
-      /*
-      function vv()
-      {
+/*
+function vv()
+{
 	
-      $header = $("#header1");
-      //getting the next element
-      $content = $header.next();
-      alert($content);
-      //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-      $content.slideToggle(500, function () {
-      //execute this after slideToggle is done
-      //change text of header based on visibility of content div
-      $header.text(function () {
-      //change text based on condition
-      // return $content.is(":visible") ? "Collapse" : "Expand";
-      });
-      });
-      $('#aa').val("1");
+          $header = $("#header1");
+          //getting the next element
+          $content = $header.next();
+          alert($content);
+          //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+          $content.slideToggle(500, function () {
+              //execute this after slideToggle is done
+              //change text of header based on visibility of content div
+              $header.text(function () {
+                  //change text based on condition
+                  // return $content.is(":visible") ? "Collapse" : "Expand";
+              });
+          });
+          $('#aa').val("1");
      
         
-      }*/
+}*/
 
        </script>
 </head>
@@ -1111,11 +1008,86 @@
  Filter> </td></tr>
 
 <tr >
-<td  align=center class="style4" colspan=2 style="border-bottom-left-radius:3px;border-bottom-right-radius:8px">
+<td  align=center class="style4" colspan=2 style="border-bottom-left-radius:3px;border-bottom-right-radius:8px" valign="top">
 	<div  id="scroll_div3" style="width:600px ;height: 600px; overflow: auto;border-bottom-left-radius:3px"
-		   >
+		  valign="top" >
 	<br>
 
+   
+   	
+
+   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span >
+   &nbsp;&nbsp;<B>
+   	Completed Earlier
+   	</B>
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+   <div >
+  	
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-16 </b> <br> vineet to vishal  
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
+   
+   	
+  	
+  </div>
+  	 <br>
+   	 <div  id="Header1" class="header"  align="left" style="cursor: default"><span>
+   &nbsp;&nbsp;<b>
+   	Completed Today
+   	</b>
+  	<br />&nbsp;&nbsp;<img  src="/assets/line1.jpg" /> </span></div>
+   <div >
+ 
+    <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
+        <tr >
+        	              <td>
+             &nbsp;  &nbsp;
+                </td>
+                      
+            <td style="text-align: left;"> 
+               <b> VG-17 </b> <br> vineet to vishal  
+               </td>
+                             <td>
+          &nbsp;  &nbsp;
+                </td>
+              <td>
+                <img alt="" src=""/>
+                </td>
+                         <td>
+              &nbsp;  &nbsp;
+                </td>
+                       <td>
+              &nbsp;  &nbsp;
+                </td>
+          
+        </tr>
+    </table>
+
+ 
    
  
     <table style="width:90%; height: 50px; border:2px solid;border-radius:8px;font-size: 12px;border-color: #D1D1D1; font-family: Arial, Helvetica, sans-serif" >
@@ -1125,7 +1097,7 @@
                 </td>
                       
             <td style="text-align: left;"> 
-               <b> URTG-077 </b> <br> This commitment made by Vineet to Vishal  
+               <b> VG-18 </b> <br> vineet to vishal  
                </td>
                              <td>
           &nbsp;  &nbsp;
@@ -1152,7 +1124,6 @@
  
 </table>
 </div>
-</body><br>
 </html>
 
 
